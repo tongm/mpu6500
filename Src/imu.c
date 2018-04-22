@@ -37,15 +37,15 @@ void v2R(_Matrix * a ,_Matrix *b)
 	s=sin(n);
 	c=cos(n);
 	
-//	matrix_set(&nv,1,3);
-//	matrix_set(&G,3,3);
-//	matrix_set(&temp,3,3);
-//	matrix_set(&temp1,3,3);
-//	matrix_set(&eye,3,3);
-//	
-//	matrix_write(&nv,0,0,matrix_read(a,0,0)/n);
-//	matrix_write(&nv,0,1,matrix_read(a,0,1)/n);
-//	matrix_write(&nv,0,2,matrix_read(a,0,2)/n);
+	matrix_set(&nv,1,3);
+	matrix_set(&G,3,3);
+	matrix_set(&temp,3,3);
+	matrix_set(&temp1,3,3);
+	matrix_set(&eye,3,3);
+	
+	matrix_write(&nv,0,0,matrix_read(a,0,0)/n);
+	matrix_write(&nv,0,1,matrix_read(a,0,1)/n);
+	matrix_write(&nv,0,2,matrix_read(a,0,2)/n);
 	
 	for(i=0;i<3;i++)
 	{
