@@ -56,44 +56,44 @@ void v2R(_Matrix * a ,_Matrix *b)
 			matrix_write(&temp1,i,j,0);
 		}
 	}
-	
-	matrix_write(&eye,0,0,1);
-	matrix_write(&eye,1,1,1);
-	matrix_write(&eye,2,2,1);
-	
-	matrix_write(&G,0,0,0);
-	matrix_write(&G,0,1,-matrix_read(&nv,0,2));
-	matrix_write(&G,0,2,matrix_read(&nv,0,1));
-	
-	matrix_write(&G,1,0,matrix_read(&nv,0,2));
-	matrix_write(&G,1,1,0);
-	matrix_write(&G,1,2,-matrix_read(&nv,0,0));
-	
-	matrix_write(&G,1,0,-matrix_read(&nv,0,1));
-	matrix_write(&G,1,1,matrix_read(&nv,0,0));
-	matrix_write(&G,1,2,0);
-	
+//	
+//	matrix_write(&eye,0,0,1);
+//	matrix_write(&eye,1,1,1);
+//	matrix_write(&eye,2,2,1);
+//	
+//	matrix_write(&G,0,0,0);
+//	matrix_write(&G,0,1,-matrix_read(&nv,0,2));
+//	matrix_write(&G,0,2,matrix_read(&nv,0,1));
+//	
+//	matrix_write(&G,1,0,matrix_read(&nv,0,2));
+//	matrix_write(&G,1,1,0);
+//	matrix_write(&G,1,2,-matrix_read(&nv,0,0));
+//	
+//	matrix_write(&G,1,0,-matrix_read(&nv,0,1));
+//	matrix_write(&G,1,1,matrix_read(&nv,0,0));
+//	matrix_write(&G,1,2,0);
+//	
 	matrix_multiply(&temp,&G,&G);
 	
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j=0)
-		{
-			tem=matrix_read(&temp,i,j);
-			matrix_write(&temp,i,j,tem*(1-c));
-		}
-	}
-	
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j=0)
-		{
-			tem=matrix_read(&G,i,j);
-			matrix_write(&G,i,j,tem*s);
-		}
-	}
-	matrix_add(&eye,&G,&temp1);
-	matrix_add(&temp1,&temp,b);
+//	for(i=0;i<3;i++)
+//	{
+//		for(j=0;j<3;j=0)
+//		{
+//			tem=matrix_read(&temp,i,j);
+//			matrix_write(&temp,i,j,tem*(1-c));
+//		}
+//	}
+//	
+//	for(i=0;i<3;i++)
+//	{
+//		for(j=0;j<3;j=0)
+//		{
+//			tem=matrix_read(&G,i,j);
+//			matrix_write(&G,i,j,tem*s);
+//		}
+//	}
+//	matrix_add(&eye,&G,&temp1);
+//	matrix_add(&temp1,&temp,b);
 }
 
 void R2v(_Matrix *a, _Matrix *b)
